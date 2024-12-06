@@ -30,7 +30,7 @@ class Main extends JFrame implements ActionListener {
       double heigth = screenSize.getHeight();
       int yPosition = (int) (heigth - (double) fHeight) / 2;
       int xPosition = (int) (width - (double) fWidth) / 2;
-      this.setTitle("Chain Reaction-JavX");
+      this.setTitle("Chain Reaction");
       this.setBounds(xPosition, yPosition, fWidth, fHeight);
       this.setVisible(true);
       this.setResizable(false);
@@ -208,7 +208,7 @@ class Main extends JFrame implements ActionListener {
             }
          }
 
-         this.setTitle("Chain Reaction-JavX        " + winner + " wins");
+         this.setTitle("Chain Reaction        " + winner + " wins");
       }
 
    }
