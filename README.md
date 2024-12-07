@@ -14,6 +14,7 @@ The game is played on an `n x n` grid. Each cell can hold a certain number of or
 -   Chain reaction mechanic based on grid cell capacity.
 -   Graphical user interface (GUI) built with Java Swing.
 -   Simple and intuitive gameplay.
+-   **Backtracking Algorithm** used for efficient game state management and to simplify code complexity.
 
 ---
 
@@ -94,6 +95,10 @@ The game is played on an `n x n` grid. Each cell can hold a certain number of or
     -   Inner cells: Capacity of 4 orbs.
 -   When a cell reaches its capacity, it "explodes," sending orbs to adjacent cells, potentially triggering a chain reaction.
 
+### Backtracking Algorithm
+
+The game logic leverages **Backtracking** to simplify the code by managing and exploring the game state efficiently. The backtracking approach allows the game to calculate the possible moves, simulate chain reactions, and backtrack when necessary to find the optimal state. This helps reduce the complexity of the game logic, making it easier to manage game state transitions and ensuring the game operates smoothly.
+
 ---
 
 ## Gameplay
@@ -103,5 +108,3 @@ The game is played on an `n x n` grid. Each cell can hold a certain number of or
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
-
----
