@@ -12,12 +12,14 @@ import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 import javax.swing.JButton;
-
 
 class Main extends JFrame implements ActionListener {
    private Buttons[][] button;
    private Icon[][] img;
+   private Icon icon;
    private int color;
    private int n;
 
@@ -40,16 +42,17 @@ class Main extends JFrame implements ActionListener {
             System.exit(0);
          }
       });
-      Image img = Toolkit.getDefaultToolkit().getImage("Icon.png");
+      Image icon = Toolkit.getDefaultToolkit().getImage("Images//Icon.png");
+      this.icon = new ImageIcon(icon);
       MediaTracker track = new MediaTracker(this);
-      track.addImage(img, 0);
+      track.addImage(icon, 0);
 
       try {
          track.waitForID(0);
       } catch (Exception var14) {
       }
 
-      this.setIconImage(img);
+      this.setIconImage(icon);
       this.setLayout((LayoutManager) null);
       this.color = 0;
       this.loadImages();
@@ -58,8 +61,9 @@ class Main extends JFrame implements ActionListener {
 
    private void loadImages() {
       this.img = new Icon[2][3];
-      String[][] imgName = new String[][] { { "Red//redOne.png", "Red//redTwo.png", "Red//redThree.png" },
-            { "Blue//blueOne.png", "Blue//blueTwo.png", "Blue//blueThree.png" } };
+      String[][] imgName = new String[][] {
+            { "Images//Red//redOne.png", "Images//Red//redTwo.png", "Images//Red//redThree.png" },
+            { "Images//Blue//blueOne.png", "Images//Blue//blueTwo.png", "Images//Blue//blueThree.png" } };
 
       for (int j = 0; j < 2; ++j) {
          for (int i = 0; i < 3; ++i) {
@@ -208,7 +212,7 @@ class Main extends JFrame implements ActionListener {
             }
          }
 
-         this.setTitle("Chain Reaction        " + winner + " wins");
+         JOptionPane.showMessageDialog(this, winner + " won!", "Game Result", JOptionPane.INFORMATION_MESSAGE);
       }
 
    }
@@ -218,6 +222,7 @@ class Main extends JFrame implements ActionListener {
       new JFrame();
    }
 }
+
 class Buttons extends JButton {
    protected int label;
    protected int state;
