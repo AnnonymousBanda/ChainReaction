@@ -92,7 +92,5 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 ---
 
-## Showcase
-Include screenshots or a short gameplay GIF here to visually demonstrate your project.  
-Example:  
-![Gameplay Screenshot](path/to/screenshot.png)
+## Gameplay
+![Gameplay Screenshot](Images/gameplay.gif)
