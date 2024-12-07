@@ -13,13 +13,11 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.UIManager;
 import javax.swing.JButton;
 
 class Main extends JFrame implements ActionListener {
    private Buttons[][] button;
    private Icon[][] img;
-   private Icon icon;
    private int color;
    private int n;
 
@@ -43,7 +41,6 @@ class Main extends JFrame implements ActionListener {
          }
       });
       Image icon = Toolkit.getDefaultToolkit().getImage("Images//Icon.png");
-      this.icon = new ImageIcon(icon);
       MediaTracker track = new MediaTracker(this);
       track.addImage(icon, 0);
 
